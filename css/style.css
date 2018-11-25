@@ -1,0 +1,243 @@
+body {
+    background-color: gainsboro;
+    animation: bgFadeIn 3000ms ease-in-out;
+}
+
+a, a:visited {
+    color: darkgray;
+    text-decoration: none;
+}
+
+#container {
+    width: 100%;
+    height: 100%;
+}
+
+#comingSoon {
+    width: 100%;
+    height: 90%;
+    position: fixed;
+}
+
+#comingSoonTitle, #comingSoonSubtitle, #notifications, #comingSoonFooter {
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+}
+
+#comingSoonSubtitle, #comingSoonFooter, #launchNotifications {
+    animation: fadeIn 4500ms ease-in-out;
+}
+
+#comingSoonTitle {
+    top: 30%;
+    animation: fadeIn 3000ms ease-in-out;
+}
+
+#comingSoonSubtitle {
+    margin-top: 50px;
+}
+
+#launchNotifications {
+    position: fixed;
+    top: 63%;
+    width: 100%;
+    height: 20%;
+}
+
+#launchNotificationsText {
+
+}
+
+#launchNotificationsButton {
+    visibility: hidden;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 35px;
+    width: 275px;
+    margin-top: 25px;
+    padding-top: 5px;
+    background-color: dimgray;
+    color: gainsboro;
+    transition: background-color 500ms linear;
+}
+
+#launchNotificationsButton:hover {
+    background-color: darkgray;
+    cursor: pointer;
+    transition: background-color 500ms linear;
+}
+
+#comingSoonFooter {
+    width: 100%;
+    position: fixed;
+    bottom: 5%;
+}
+
+#NiksL {
+    transform: translateY(-5%);
+    position: relative;
+    transition: color 750ms ease-in-out;
+}
+
+#NiksL:hover {
+    cursor: pointer;
+    color: dimgray;
+    transition: color 750ms ease-in-out;
+}
+
+.text {
+    vertical-align: middle;
+    text-align: center;
+}
+
+.title {
+    color: dimgray;
+    font-size: 125px;
+    line-height: 125px;
+}
+
+.subtitle {
+    color: darkgray;
+    font-size: 25px;
+    line-height: 25px;
+}
+
+.fadeIn {
+    animation: fadeIn 495ms linear forwards;
+}
+
+.fadeOut {
+    animation: fadeOut 495ms linear forwards;
+}
+
+.notSelectable {
+    user-select: none;
+}
+
+@font-face {
+    /*Font proved by dafont.com user Anita*/
+    /*https://www.dafont.com/umba-sans.font*/
+    font-family: umbaSans;
+    src: url('../fonts/umbaSans/UmbaSans-Bold.eot');
+    src: url('../fonts/umbaSans/UmbaSans-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/umbaSans/UmbaSans-Bold.woff2') format('woff2'),
+    url('../fonts/umbaSans/UmbaSans-Bold.woff') format('woff'),
+    url('../fonts/umbaSans/UmbaSans-Bold.ttf') format('truetype'),
+    url('../fonts/umbaSans/UmbaSans-Bold.svg#UmbaSans-Bold') format('svg');
+
+}
+
+.umbaSans {
+    font-family: umbaSans;
+}
+
+@keyframes bgFadeIn {
+    from {
+        background-color: white;
+    }
+    to {
+        background-color: gainsboro;
+    }
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+/*media queries*/
+/*iPad landscape media query*/
+@media only screen and (max-width: 1248px) {
+
+}
+
+/*iPad portrait media query*/
+@media only screen and (max-width: 768px) {
+
+    #comingSoonTitle {
+        margin-bottom: 35px;
+    }
+
+    #comingSoonSubtitle {
+        margin-top: 25px;
+    }
+
+    .title {
+        font-size: 90px;
+    }
+
+    .subtitle {
+        font-size: 25px;
+    }
+
+}
+
+/*iPhone 5.5" media query*/
+@media only screen and (max-width: 414px) {
+
+    #comingSoonTitle {
+        margin-bottom: 25px;
+    }
+
+    #comingSoonSubtitle {
+        margin-top: -20px;
+    }
+
+    #launchNotificationsButton {
+        width: 225px;
+        margin-top: 15px;
+    }
+
+    .title {
+        font-size: 54px;
+    }
+
+    .subtitle {
+        font-size: 20px;
+    }
+
+}
+
+/*iPhone 4.7" portrait media query*/
+@media only screen and (max-width: 375px) {
+
+    .title {
+        font-size: 49px;
+    }
+
+    .subtitle {
+        font-size: 20px;
+    }
+
+}
+
+/*iPhone 4" portrait media query*/
+@media only screen and (max-width: 320px) {
+
+    #comingSoonSubtitle {
+        margin-top: -25px;
+    }
+
+    #launchNotificationsButton {
+        height: 30px;
+        width: 175px;
+        margin-top: 10px;
+        padding-top: 2px;
+    }
+
+    .title {
+        font-size: 44px;
+    }
+
+    .subtitle {
+        font-size: 15px;
+    }
+
+}

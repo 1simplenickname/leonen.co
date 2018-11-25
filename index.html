@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Coming soon. - Leonen.co</title>
+        <!--Favicons-->
+        <link rel="apple-touch-icon" sizes="180x180" href="img/icons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="img/icons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="img/icons/favicon-16x16.png">
+        <link rel="manifest" href="img/icons/site.webmanifest">
+        <link rel="shortcut icon" href="img/icons/favicon.ico">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-config" content="img/icons/browserconfig.xml">
+        <meta name="theme-color" content="#dcdcdc">
+        <!--Display scaling support-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--Styling and animations-->
+        <link rel="stylesheet" type="text/css" href="css/reset.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <!--OneSignal push notification support-->
+        <link rel="manifest" href="/manifest.json" />
+        <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js"></script>
+        <script>
+
+            let OneSignal = window.OneSignal || [];
+
+            OneSignal.push(function() {
+
+                OneSignal.init({
+
+                    // WARNING Use only one appId at a time
+                    // leonen.co
+                    // appId: "f4dc6469-a692-446b-bcc8-724bdb2b4cd6",
+                    // localhost:63342
+                    appId: "84771423-6c01-44c6-bd90-e0a31a5329d2",
+                    autoRegister: false,
+                    allowLocalhostAsSecureOrigin: true,
+                    notifyButton: {
+                        enable: false,
+                    },
+                    persistNotification: false,
+
+                });
+
+            });
+
+        </script>
+
+    </head>
+
+    <body>
+
+        <div id="container">
+
+            <div id="comingSoon" class="notSelectable">
+
+                <div id="comingSoonTitle" class="text title umbaSans">
+
+                    Coming soon.
+
+                    <div id="comingSoonSubtitle" class="text subtitle umbaSans">
+
+                        But I don't know how soon.
+
+                    </div>
+
+                </div>
+
+                <div id="launchNotifications">
+
+                    <div id="launchNotificationsText" class="text subtitle umbaSans"></div>
+
+                    <div id="launchNotificationsButton" class="text subtitle umbaSans"
+                         onclick="notificationButtonClick()"></div>
+
+                </div>
+
+                <div id="comingSoonFooter" class="text subtitle umbaSans">
+
+                    Made by
+
+                    <a id="NiksL" href="https://www.twitter.com/1simplenickname/status/1064511460578131968" target="_newtab">
+
+                        Niks Ļeoņenko
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <script src="js/scripts.js"></script>
+        <script>
+
+            OneSignal.push(() => {
+
+                this.showNotifications = OneSignal.isPushNotificationsSupported();
+
+                if (this.showNotifications) {
+
+                    console.log("Browser supports notifications");
+                    toggleVisibility("launchNotificationsButton", "visible");
+
+                    if (launchNotificationSetting !== "enabled") {
+
+                        launchNotificationsText.innerHTML = "To be notified when I launch the site,\n" + "<br>\n" + "use the button below";
+                        launchNotificationButton.innerHTML = "Enable notifications";
+
+                    } else if (launchNotificationSetting !== "disabled") {
+
+                        console.log("Launch notifications have already been enabled by user");
+
+                        launchNotificationsText.innerHTML = "To not be notified when I launch the site,\n" + "<br>\n" + "use the button below";
+                        launchNotificationButton.innerHTML = "Disable notifications";
+
+                    }
+
+                } else {
+
+                    console.log("Browser doesn't support notifications");
+
+                    toggleVisibility("launchNotificationsButton", "hidden");
+                    launchNotificationsText.innerHTML = "Come back later. <br> I'm sure the site'll be up by then";
+
+                }
+            });
+
+        </script>
+
+    </body>
+
+</html>
