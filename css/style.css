@@ -19,13 +19,13 @@ a, a:visited {
     position: fixed;
 }
 
-#comingSoonTitle, #comingSoonSubtitle, #notifications, #comingSoonFooter {
+#comingSoonTitle, #comingSoonSubtitle, #comingSoonFooter {
     left: 50%;
     transform: translateX(-50%);
     position: relative;
 }
 
-#comingSoonSubtitle, #comingSoonFooter, #launchNotifications {
+#comingSoonSubtitle, #comingSoonFooter {
     animation: fadeIn 4500ms ease-in-out;
 }
 
@@ -36,37 +36,6 @@ a, a:visited {
 
 #comingSoonSubtitle {
     margin-top: 50px;
-}
-
-#launchNotifications {
-    position: fixed;
-    top: 63%;
-    width: 100%;
-    height: 20%;
-}
-
-#launchNotificationsText {
-
-}
-
-#launchNotificationsButton {
-    visibility: hidden;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    height: 35px;
-    width: 275px;
-    margin-top: 25px;
-    padding-top: 5px;
-    background-color: dimgray;
-    color: gainsboro;
-    transition: background-color 500ms linear;
-}
-
-#launchNotificationsButton:hover {
-    background-color: darkgray;
-    cursor: pointer;
-    transition: background-color 500ms linear;
 }
 
 #comingSoonFooter {
