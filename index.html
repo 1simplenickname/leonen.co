@@ -21,34 +21,6 @@
         <!--Styling and animations-->
         <link rel="stylesheet" type="text/css" href="css/reset.css">
         <link rel="stylesheet" type="text/css" href="css/style.css">
-        <!--OneSignal push notification support-->
-        <link rel="manifest" href="/manifest.json" />
-        <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js"></script>
-        <script>
-
-            let OneSignal = window.OneSignal || [];
-
-            OneSignal.push(function() {
-
-                OneSignal.init({
-
-                    // WARNING Use only one appId at a time
-                    // leonen.co
-                    // appId: "f4dc6469-a692-446b-bcc8-724bdb2b4cd6",
-                    // localhost:63342
-                    appId: "84771423-6c01-44c6-bd90-e0a31a5329d2",
-                    autoRegister: false,
-                    allowLocalhostAsSecureOrigin: true,
-                    notifyButton: {
-                        enable: false,
-                    },
-                    persistNotification: false,
-
-                });
-
-            });
-
-        </script>
 
     </head>
 
@@ -70,15 +42,6 @@
 
                 </div>
 
-                <div id="launchNotifications">
-
-                    <div id="launchNotificationsText" class="text subtitle umbaSans"></div>
-
-                    <div id="launchNotificationsButton" class="text subtitle umbaSans"
-                         onclick="notificationButtonClick()"></div>
-
-                </div>
-
                 <div id="comingSoonFooter" class="text subtitle umbaSans">
 
                     Made by
@@ -96,42 +59,6 @@
         </div>
 
         <script src="js/scripts.js"></script>
-        <script>
-
-            OneSignal.push(() => {
-
-                this.showNotifications = OneSignal.isPushNotificationsSupported();
-
-                if (this.showNotifications) {
-
-                    console.log("Browser supports notifications");
-                    toggleVisibility("launchNotificationsButton", "visible");
-
-                    if (launchNotificationSetting !== "enabled") {
-
-                        launchNotificationsText.innerHTML = "To be notified when I launch the site,\n" + "<br>\n" + "use the button below";
-                        launchNotificationButton.innerHTML = "Enable notifications";
-
-                    } else if (launchNotificationSetting !== "disabled") {
-
-                        console.log("Launch notifications have already been enabled by user");
-
-                        launchNotificationsText.innerHTML = "To not be notified when I launch the site,\n" + "<br>\n" + "use the button below";
-                        launchNotificationButton.innerHTML = "Disable notifications";
-
-                    }
-
-                } else {
-
-                    console.log("Browser doesn't support notifications");
-
-                    toggleVisibility("launchNotificationsButton", "hidden");
-                    launchNotificationsText.innerHTML = "Come back later. <br> I'm sure the site'll be up by then";
-
-                }
-            });
-
-        </script>
 
     </body>
 
