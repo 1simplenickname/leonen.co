@@ -1,5 +1,4 @@
 let visited = localStorage.getItem("visited");
-let launchNotificationSetting = localStorage.getItem("launchNotificationSetting");
 
 window.onload = function () {
 
