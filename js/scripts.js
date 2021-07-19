@@ -1,15 +1,15 @@
-let visited = localStorage.getItem("visited");
+    let visited = localStorage.getItem("visited");
 
-window.onload = function () {
+    window.onload = function () {
 
-    if (visited !== "yes") {
-        localStorage.setItem("visited", "yes");
+        if (visited !== "yes") {
+            localStorage.setItem("visited", "yes");
+        }
+
+    };
+
+    function toggleVisibility(target, state) {
+    
+        document.getElementById(target).style.visibility = state;
+
     }
-
-};
-
-function toggleVisibility(target, state) {
-
-    document.getElementById(target).style.visibility = state;
-
-}
