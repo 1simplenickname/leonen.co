@@ -1,162 +1,35 @@
     html {
         height: 100%;
-        -khtml-user-select: none;
+        background: #e50035;
         -webkit-user-select: none;
+        -webkit-touch-callout: none;
+        -moz-user-select: none;
         -ms-user-select: none;
         user-select: none;
     }
-    body {
-        height: 100%;
-        margin: 0;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-    }
 
     body {
-        color-scheme: light dark;
-    }
-
-    a, a:visited {
-        color: #999999;
-        text-decoration: none;
-    }
-
-    #container {
-        width: 100%;
-        height: 100%;
-        background-image: linear-gradient(#DCDCDC, #FFFFFF);
-        animation: bgFadeIn 3000ms ease-in-out;
-    }
-
-    #homepage {
-        width: 100%;
-        height: 90%;
-        position: fixed;
-    }
-
-    #homepageContent, #homepageSubtitle, #footer {
-        left: 50%;
-        transform: translateX(-50%);
-        position: relative;
-    }
-
-    #homepageContent {
-        top: 30%;
-    }
-
-    #homepageSubtitle {
-        margin-top: 50px;
-    }
-
-    #footer {
-        width: 100%;
-        position: fixed;
-        bottom: 5%;
-    }
-
-    #Etsy, #NiksL {
-        transform: translateY(-5%);
-        position: relative;
-        transition: color 750ms ease-in-out;
-    }
-
-    #Etsy:hover, #NiksL:hover {
-        cursor: pointer;
-        color: #737373;
-        transition: color 750ms ease-in-out;
-    }
-
-    .text {
-        vertical-align: middle;
+        color: #ffffff;
         text-align: center;
+        font-family: "SF Pro Rounded", serif;
+        font-size: 35px;
+        margin: auto
+    }
+    
+    #content {
+        margin-top: 45%;
     }
 
-    .logoTop {
-        color: #737373;
-        font-size: 125px;
-        line-height: 125px;
-        font-family: "SF Pro Text", serif;
+    #subtitle {
+        margin-top: 20px;
+    }
+    
+    img {
+        margin-top: 15px;
+        margin-left: 15px;
     }
 
-    .logoBottom {
-        color: #999999;
-        font-size: 83px;
-        line-height: 83px;
-        font-family: "SF Pro Display", serif;
-    }
-
-    .subtitle {
-        color: #999999;
-        font-size: 25px;
-        line-height: 25px;
-        font-family: "SF Pro Display", serif;
-    }
-
-    .fadeIn {
-        animation: fadeIn 495ms linear forwards;
-    }
-
-    .fadeOut {
-        animation: fadeOut 495ms linear forwards;
-    }
-
-    .notSelectable {
-        user-select: none;
-    }
-
-    @font-face {
-        font-family: "SF Pro Text";
-        src: url('../fonts/sf pro text/SF Pro Text.eot');
-        src: url('../fonts/sf pro text/SF Pro Text.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/sf pro text/SF Pro Text.woff') format('woff'),
-        url('../fonts/sf pro text/SF Pro Text.ttf') format('truetype'),
-        url('../fonts/sf pro text/SF Pro Text.svg#UmbaSans-Bold') format('svg');
-    }
-
-    @font-face {
-        font-family: "SF Pro Display";
-        src: url('../fonts/sf pro display/SF Pro Display.eot');
-        src: url('../fonts/sf pro display/SF Pro Display.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/sf pro display/SF Pro Display.woff') format('woff'),
-        url('../fonts/sf pro display/SF Pro Display.ttf') format('truetype'),
-        url('../fonts/sf pro display/SF Pro Display.svg#UmbaSans-Bold') format('svg');
-    }
-
-    @keyframes bgFadeIn {
-        from {
-            background-color: white;
-        }
-    }
-
-    /*media queries*/
-
-    /*operating system color scheme media query*/
-    @media (prefers-color-scheme: dark) {
-
-        body {
-            background-color: rgb(24, 25, 27);
-        }
-
-        a, a:visited {
-            color: #737373;
-        }
-
-        #Etsy:hover, #NiksL:hover {
-            color: #999999;
-        }
-
-        .logoTop {
-            color: #999999;
-        }
-
-        .subtitle {
-            color: #737373;
-        }
-
-        @keyframes bgFadeIn {
-            from {
-                background-color: black;
-            }
-        }
-
+    .title {
+        font-size: 100px;
+        margin-top: -10px; 
     }
