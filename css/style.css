@@ -33,3 +33,8 @@
         font-size: 100px;
         margin-top: -10px; 
     }
+    
+    @font-face {
+        font-family: "SF Pro Rounded";
+        src: url('../fonts/sf pro rounded.ttf');
+    }
