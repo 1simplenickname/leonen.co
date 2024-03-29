@@ -1,0 +1,99 @@
+    /* style.css */
+    
+    html {
+        height: 100%;
+        -khtml-user-select: none; -webkit-user-select: none; -ms-user-select: none; user-select: none;
+    }
+    
+    body {
+        height: 100%;
+        background-attachment: fixed;
+        background-image: linear-gradient(#dcdcdc, #ffffff);
+        color: #999999;
+        text-align: center;
+    }
+
+    /*  */
+    #homepage { width: 100%; height: 90%; position: fixed; }
+
+    #homepageContent, #homepageSubtitle, #footer { left: 50%;  transform: translateX(-50%); position: relative; }
+    #homepageContent { top: 30%; } #homepageSubtitle { top: 35%; } #footer { position: fixed; bottom: 5%; } 
+    
+    /* Links */
+    a, a:visited { color: #999999; text-decoration: none; }
+    #Etsy, #NiksL { transition: color 750ms ease-in-out; }
+    #Etsy:hover, #NiksL:hover { cursor: pointer; color: #737373;}
+    
+    /* Misc/ */
+    .notSelectable { user-select: none; }
+    
+    /* Fonts, font faces, font families */
+    
+    .logoTop {
+        color: #737373;
+        font-size: 125px;
+        line-height: 125px;
+        font-weight: bold;
+        font-family: "SF Pro Text";
+    }
+    
+    .logoBottom {
+        font-size: 83px;
+        line-height: 83px;
+        font-family: "SF Pro Display";
+    }
+    
+    .subtitle {
+        font-size: 25px;
+        line-height: 25px;
+        font-family: "SF Pro Display";
+    }
+    
+    /* SF Pro Rounded */
+    /* Regular */
+    @font-face {
+        font-family: "SF Pro Rounded Regular";
+        url('../fonts/sf pro rounded/Regular.woff') format('woff'),
+        url('../fonts/sf pro rounded/Regular.ttf') format('truetype'),
+        url('../fonts/sf pro rounded/Regular.svg') format('svg');
+    }
+    
+    /* Bold */
+    @font-face {
+        font-family: "SF Pro Rounded Bold";
+        url('../fonts/sf pro rounded/Bold.woff') format('woff'),
+        url('../fonts/sf pro rounded/Bold.ttf') format('truetype'),
+        url('../fonts/sf pro rounded/Bold.svg') format('svg');
+    }
+
+    /* SF Pro Display */
+    @font-face {
+        font-family: "SF Pro Display";
+        url('../fonts/sf pro display/SF Pro Display.woff') format('woff'),
+        url('../fonts/sf pro display/SF Pro Display.ttf') format('truetype'),
+        url('../fonts/sf pro display/SF Pro Display.svg') format('svg');
+    }
+    
+    /* SF Pro Text */
+    @font-face {
+        font-family: "SF Pro Text";
+        url('../fonts/sf pro text/SF Pro Text.woff') format('woff'),
+        url('../fonts/sf pro text/SF Pro Text.ttf') format('truetype'),
+        url('../fonts/sf pro text/SF Pro Text.svg') format('svg');
+    }
+
+    /* Media queries*/
+    
+    /* Query for detecting dark mode */
+    @media (prefers-color-scheme: dark) {
+
+        body { background-image: linear-gradient(#18191B, #18191B) }
+
+        /* Links */
+        a, a:visited { color: #737373;  }
+        #Etsy:hover, #NiksL:hover {  color: #999999; }
+
+        .logoTop { color: #999999; }
+        .subtitle { color: #737373; }
+
+    }
